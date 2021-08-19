@@ -24,11 +24,11 @@ class Game {
     private pause : boolean
    
     // Sounds
-    private themeSong = new Audio("/docs/audio/song.mp3");
-    private meow = new Audio("/docs/audio/meow.wav")
-    private failHorn = new Audio("/docs/audio/failHorn.wav")
-    private clapping = new Audio("/docs/audio/clapping.wav")
-    private chonkerSound = new Audio("/docs/audio/chonker.mp3")
+    private themeSong = new Audio("../docs/audio/song.mp3");
+    private meow = new Audio("../docs/audio/meow.wav")
+    private failHorn = new Audio("../docs/audio/failHorn.wav")
+    private clapping = new Audio("../docs/audio/clapping.wav")
+    private chonkerSound = new Audio("../docs/audio/chonker.mp3")
 
     constructor() {
         // Start the theme song
