@@ -12,7 +12,7 @@ export class cat extends entities{
         this.create();
 
         // The x and y values of the cat
-        this.x = Math.floor(Math.random() * (window.innerWidth - this.div.clientWidth)) + 200; 
+        this.x = Math.floor(Math.random() * (window.innerWidth - this.div.clientWidth)) + 500; 
         this.y = Math.floor(Math.random() * (window.innerHeight - this.div.clientHeight));
     }
 
