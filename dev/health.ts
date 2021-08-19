@@ -37,7 +37,7 @@ export class health extends entities{
     }
 
     // Everytime the ball of wool is hit -20 health
-    public loseHealth(): void{
+    public loseHealth() : void{
         this.healthBar -= 20
      }
 

@@ -24,11 +24,11 @@ class Game {
     private pause : boolean
    
     // Sounds
-    private themeSong = new Audio("../docs/audio/song.mp3");
-    private meow = new Audio("../docs/audio/meow.wav")
-    private failHorn = new Audio("../docs/audio/failHorn.wav")
-    private clapping = new Audio("../docs/audio/clapping.wav")
-    private chonkerSound = new Audio("../docs/audio/chonker.mp3")
+    private themeSong : HTMLAudioElement = new Audio("/docs/audio/song.mp3");
+    private meow : HTMLAudioElement = new Audio("/docs/audio/meow.wav")
+    private failHorn : HTMLAudioElement = new Audio("/docs/audio/failHorn.wav")
+    private clapping : HTMLAudioElement = new Audio("/docs/audio/clapping.wav")
+    private chonkerSound : HTMLAudioElement = new Audio("/docs/audio/chonker.mp3")
 
     constructor() {
         // Start the theme song
@@ -56,6 +56,7 @@ class Game {
 
         // Start the gameloop
         this.gameLoop()
+
     }
 
     // The gameloop
@@ -105,7 +106,7 @@ class Game {
         }
 
         // When health is 0 pause the game and spawn the fail screen
-        if(this.healthBar.healthBar == 0){
+        if(this.healthBar.healthBar <= 0){
             this.failHorn.play()
             this.themeSong.pause()
             this.spawnFail()
@@ -141,7 +142,7 @@ class Game {
      }
 
      // A chance of 50% to spawn a new cat
-     private spawnCat(){
+     private spawnCat() : void{
         if(this.spawn == true){
             console.log()
             if(Math.round(Math.random()) == 1){
@@ -155,13 +156,13 @@ class Game {
     }
 
     // Spawn of the failscreen
-    private spawnFail(){
+    private spawnFail() : void{
         this.fail = new failScreen("failScreen")
         this.pause = true
     }
 
     // Spawn of the Endscreen
-    private spawnEnd(){
+    private spawnEnd() : void {
         this.end = new endScreen("endScreen")
         this.pause = true
     }

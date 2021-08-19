@@ -12,7 +12,7 @@ export class entities {
         return this.div.getBoundingClientRect()
     }
 
-    public update() {
+    public update() : void {
 
         // Translation of x and y to px
         this.div.style.transform = `translate(${this.x}px, ${this.y}px)`

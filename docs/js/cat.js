@@ -3,7 +3,7 @@ export class cat extends entities {
     constructor(tagName) {
         super();
         this.create();
-        this.x = Math.floor(Math.random() * (window.innerWidth - this.div.clientWidth)) + 1000;
+        this.x = Math.floor(Math.random() * (window.innerWidth - this.div.clientWidth)) + 200;
         this.y = Math.floor(Math.random() * (window.innerHeight - this.div.clientHeight));
     }
     create() {
