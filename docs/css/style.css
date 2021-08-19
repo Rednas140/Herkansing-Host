@@ -1,0 +1,89 @@
+body {
+    background-color: #d59154;
+    overflow:hidden;
+    margin:0px; padding:0px;
+}
+
+cat, chonk, background, wool, timer, health, end, fail {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+end {
+    background-color: white;
+    background-image: url(../images/catHappy.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 20%; 
+    height: 80%;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 20px;
+}
+
+fail {
+    background-color: white;
+    background-image: url(../images/catSad.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 20%; 
+    height: 80%;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    padding-top: 20px;
+}
+
+timer {
+    background-image: url(../images/timer.png);
+    background-size: contain;
+    width: 100px; 
+    height: 100px;
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+health {
+    background-image: url(../images/health.png);
+    background-size: contain;
+    width: 100px; 
+    height: 100px;
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+cat {
+    background-image: url(../images/cat.gif);
+    background-size: cover;
+    width:130px; height: 110px;
+}
+
+chonk{
+    background-image: url(../images/chonker.gif);
+    background-size: cover;
+    width:138px; height: 230px;
+}
+
+wool {
+    background-image: url(../images/wool.png);
+    background-size: contain;
+    width:135px; height: 135px;
+}
+
+background {
+	background-image: url(../images/water.png);
+    width:100%; height: 100%;
+    background-size: cover;
+}
+
