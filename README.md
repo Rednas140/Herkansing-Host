@@ -18,15 +18,11 @@ Wanneer je volledige eindcijfer (klassendiagram + afgeronde eindopdracht) een on
 
 <br>
 <br>
-<Br>
+<br>
 
 # Klassendiagram
+<img src="UMLProject.png">
 
-Plaats je klassendiagram als PNG bestand. Dat kan je doen met een image tag:
-
-```javascript
-<img src="mijnklassendiagram.png">
-```
 ## Classes en verantwoordelijkheden
 
 Toelichting classes en verantwoordelijkheden
