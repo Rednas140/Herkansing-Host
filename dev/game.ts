@@ -31,11 +31,6 @@ class Game {
     private chonkerSound = new Audio("../docs/audio/chonker.mp3")
 
     constructor() {
-        // Start the theme song
-        this.themeSong.play()
-        this.themeSong.volume = 0.5
-        this.themeSong.loop = true
-
         // Create the cats
         this.cats = [new cat("cat"), new cat("cat"), new cat("cat"), new cat("cat"), new cat("cat")]
 
@@ -60,6 +55,10 @@ class Game {
 
     // The gameloop
     private gameLoop() : void {
+        // Start the theme song
+        this.themeSong.play()
+        this.themeSong.volume = 0.5
+        this.themeSong.loop = true        
 
         // Cats loop
         for (let cat of this.cats) {
