@@ -11,14 +11,11 @@ class Game {
         this.chonker = [];
         this.spawn = false;
         this.spawnTimer = 0;
-        this.themeSong = new Audio("../docs/audio/song.mp3");
-        this.meow = new Audio("../docs/audio/meow.wav");
-        this.failHorn = new Audio("../docs/audio/failHorn.wav");
-        this.clapping = new Audio("../docs/audio/clapping.wav");
-        this.chonkerSound = new Audio("../docs/audio/chonker.mp3");
-        this.themeSong.play();
-        this.themeSong.volume = 0.5;
-        this.themeSong.loop = true;
+        this.themeSong = new Audio("../docs/images/song.mp3");
+        this.meow = new Audio("../docs/images/meow.wav");
+        this.failHorn = new Audio("../docs/images/failHorn.wav");
+        this.clapping = new Audio("../docs/images/clapping.wav");
+        this.chonkerSound = new Audio("../docs/images/chonker.mp3");
         this.cats = [new cat("cat"), new cat("cat"), new cat("cat"), new cat("cat"), new cat("cat")];
         this.chonker = [new chonk("chonk"), new chonk("chonk")];
         this.woolBal = new wool("wool");
@@ -28,6 +25,9 @@ class Game {
         this.gameLoop();
     }
     gameLoop() {
+        this.themeSong.play();
+        this.themeSong.volume = 0.5;
+        this.themeSong.loop = true;
         for (let cat of this.cats) {
             cat.update();
             if (this.checkCollision(cat.getBoundingRect(), this.woolBal.getBoundingRect())) {
