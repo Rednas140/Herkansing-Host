@@ -25,10 +25,10 @@ class Game {
    
     // Sounds
     private themeSong : HTMLAudioElement = new Audio("../docs/audio/song.mp3");
-    private meow : HTMLAudioElement = new Audio("../docs/audio/meow.wav")
-    private failHorn : HTMLAudioElement = new Audio("../docs/audio/failHorn.wav")
-    private clapping : HTMLAudioElement = new Audio("../docs/audio/clapping.wav")
-    private chonkerSound : HTMLAudioElement = new Audio("../docs/audio/chonker.mp3")
+    private meow : HTMLAudioElement = new Audio("../docs/audio/meow.wav");
+    private failHorn : HTMLAudioElement = new Audio("../docs/audio/failHorn.wav");
+    private clapping : HTMLAudioElement = new Audio("../docs/audio/clapping.wav");
+    private chonkerSound : HTMLAudioElement = new Audio("../docs/audio/chonker.mp3");
 
     constructor() {
         // Create the cats
