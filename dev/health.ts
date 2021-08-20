@@ -3,8 +3,15 @@ import { entities } from "./entities.js";
 export class health extends entities{
     
     // The starting health
-    public healthBar : number = 100
+    private _healthBar : number = 20
 
+    get healthBar() {
+        return this._healthBar
+    }
+
+    set healthBar(i:number){
+        this._healthBar    
+    }
 
     constructor(tagName: string) {
 
@@ -30,7 +37,7 @@ export class health extends entities{
     public update() : void {
 
         // Updating the health in-game 
-        this.div.innerHTML = `${this.healthBar}`;
+        this.div.innerHTML = `${this._healthBar}`;
 
         // Super Update
         super.update()
@@ -38,7 +45,7 @@ export class health extends entities{
 
     // Everytime the ball of wool is hit -20 health
     public loseHealth() : void{
-        this.healthBar -= 20
+        this._healthBar -= 20
      }
 
 }
