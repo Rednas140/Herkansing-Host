@@ -11,8 +11,8 @@ class Game {
         this.chonker = [];
         this.spawn = false;
         this.spawnTimer = 0;
-        this.themeSong = new Audio("/docs/audio/song.mp3");
-        this.meow = new Audio("/docs/audio/meow.wav");
+        this.themeSong = new Audio("../docs/audio/song.mp3");
+        this.meow = new Audio("./docs/audio/meow.wav");
         this.failHorn = new Audio("/docs/audio/failHorn.wav");
         this.clapping = new Audio("/docs/audio/clapping.wav");
         this.chonkerSound = new Audio("/docs/audio/chonker.mp3");
