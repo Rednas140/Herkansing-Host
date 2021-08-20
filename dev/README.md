@@ -19,6 +19,7 @@ Wanneer je volledige eindcijfer (klassendiagram + afgeronde eindopdracht) een on
 <br>
 <br>
 <Br>
+https://rednas140.github.io/Herkansing-Host/docs/
 
 ## Classes en verantwoordelijkheden
 Wool Escape:<br>
@@ -53,14 +54,14 @@ De chonk-class bestaat alleen uit functies, de create() functie staat op private
 De cat-class bestaat alleen uit functies, de create() functie staat op private, omdat deze alleen in de class zelf wordt aangeroepen bij het aanmaken van de class. De update() staat op public, zodat deze functie aangeroepen kan worden in de gameloop in de game-class zodat de update functie ook daadwerkelijk update. De damageBall() wordt gebruikt om de cat weer terug te plaatsen naar de rechterkant na een collsion met de speler. aangezien de collision check plaatsvindt in de game-class staat damagBall() op public.
 
 **timer** <br>
-De timer-class heeft 1 variable en de standaard functies. De variabele timer heeft de waarde van de huidige tijd in zich opgeslagen. Deze variabele wordt in de game-class gebruikt om te checken of de tijd 0 is en het eindscherm moet worden weergegeven, daarom staat deze variabele op public. 
+De timer-class heeft 1 variable en de standaard functies. De variabele _timer heeft de waarde van de huidige tijd in zich opgeslagen. Deze variabele wordt in de game-class gebruikt om te checken of de tijd 0 is en het eindscherm moet worden weergegeven, bij deze variable is gebruik gemaakt van een getter en een setter waardoor hij private kan blijven
 de create() functie staat op private, omdat deze alleen in de class zelf wordt aangeroepen bij het aanmaken van de class. De update() staat op public, zodat deze functie aangeroepen kan worden in de gameloop in de game-class zodat de update functie ook daadwerkelijk update.
 
 **wool** <br>
 De wool-class heeft 1 variabele en een aantal functies. de variabele verticalMovement wordt gebruikt om de y aan te passen op het moment dat er op de juiste toetsen wordt gedrukt, dit wordt in de class zelf gedaan en daarom staat de verticalMovement variable op private. De create() functie staat op private, omdat deze alleen in de class zelf wordt aangeroepen bij het aanmaken van de class. De update() staat op public, zodat deze functie aangeroepen kan worden in de gameloop in de game-class zodat de update functie ook daadwerkelijk update. De onKeyDown() functie wordt gebruikt om op het moment dat het pijltje omhoog of omlaag wordt losgelaten ervoor te zorgen dat de bol wol stopt met omhoog of omlaag gaan, dit gebeurt alleen in de wool-class en dus staat onKeyDown() op private. De onKeyUp() functie wordt gebruikt om op het moment dat het pijltje omhoog of omlaag wordt ingedrukt ervoor te zorgen dat de bol wol omhoog of omlaag gaat, dit gebeurt alleen in de wool-class en dus staat onKeyUp() op private. 
 
 **health** <br>
-De health-class heeft 1 variable en de standaard functies. De variabele healthBar heeft de waarde van de huidige health in zich opgeslagen. Deze variabele wordt in de game-class gebruikt om te checken of de health op 0 is en het faalscherm moet worden weergegeven, daarom staat deze variabele op public. 
+De health-class heeft 1 variable en de standaard functies. De variabele _healthBar heeft de waarde van de huidige health in zich opgeslagen. Deze variabele wordt in de game-class gebruikt om te checken of de health op 0 is en het faalscherm moet worden weergegeven, bij deze variable is gebruik gemaakt van een getter en een setter waardoor hij private kan blijven
 de create() functie staat op private, omdat deze alleen in de class zelf wordt aangeroepen bij het aanmaken van de class. De update() staat op public, zodat deze functie aangeroepen kan worden in de gameloop in de game-class zodat de update functie ook daadwerkelijk update. de loseHealth() functie wordt gebruikt om van de healthBar elke keer bij een collision 20 punten health eraf te halen. aangezien de collision in de game-class wordt gedaan moet de loseHealth() functie op public staan. 
 
 **entities** <br>
@@ -92,11 +93,9 @@ x en y zijn twee number variabelen die verantwoordelijk zijn voor de locatie van
 <br> 
 div, btn, br zijn alle 3 HTMLElement variabelen, maar hebben wel verschillende taken. De div variabel wordt gebruikt voor het maken van het element waarin de bijhorende class in wordt geplaats, dit wordt bij alle classes gebruikt en div wordt dus bij alle children ingezet. btn en br worden bij de children endScreen en failscreen gebruikt. btn wordt gebruikt om de btn weer te geven die de game opnieuw start en br wordt gebruikt om de button en de tekst van div (toegevoegd doormiddel van .innerHTML, hier was dus geen extra variabel voor nodig) van elkaar te scheiden wat er beter uitziet in de game.
 <br>
-<br>
 
 **functie**<br>
 de functie die wordt overgeërfd is de de update() functie. in deze functie wordt de nummer waarde van de x en de y variabelen omgezet in px, die in tegenstelling tot de number van x en y wel te gebruiken is voor styling.  
-<br>
 <br>
 <Br>
 
@@ -115,21 +114,44 @@ de chonk  is een kat die groter is dan de 'normale' kat, loopt 50% langzamer dan
 
 
 ## Classes
-
-Toelichting classes
+De classes zijn failScreen, endScreen, chonk, cat, timer, wool, health.
 
 ## Encapsulation
-
-Toelichting encapsulation
+zoals te zien is in de code, is bij alle classes Encapsulation toegepast op de juiste manier. En bij de health-class is er bij de healthBar variable gebruik gemaakt van een getter en een setter en ditzelfde is gedaan bij de timer variable van de timer-class
 
 ## Composition
-
-Toelichting composition
+game heeft wool, dit is de wollen bal die de speler bestuurt.<br>
+wool is een entities.<br>
+game heeft cat, dit is de kleine kat die de speler moet ontwijken.<br>
+cat is een entities.<br>
+game heeft chonk, dit is de grote langzame kat die de speler moet ontwijken.<br>
+chonk is een entities.<br>
+game heeft timer, dit is de timer die weergeeft hoeveel tijd er is verstreken.<br>
+timer is een entities.<br>
+game heeft health, dit de health die weergeeft hoeveel health er over is.<br>
+health is een entities.<br>
+game heeft endScreen, dit is het scherm dat wordt weergegeven wanneer de tijd is verstreken.<br>
+endscreen is een entities.<br>
+game heeft failScreen, dit is het scherm dat wordt weergegeven wanneer de speler geen health meer heeft.<br>
+failscreen is een entities.<br>
+dit is ook allemaal te zien in de respectievelijke classes.
 
 ## Inheritance
+Overerving is toegepast op failScreen, endScreen, chonk, cat, timer, wool en health. de parent van al deze classes is entitites en deze heeft meerdere variabelen en een functie. <br>
+**variabelen**<br>
+x en y zijn twee number variabelen die verantwoordelijk zijn voor de locatie van de classes op het scherm. aangezien alle classes uiteindelijk op het scherm te zien zijn, worden deze variabelen bij alle children toegepast.
+<br> 
+div, btn, br zijn alle 3 HTMLElement variabelen, maar hebben wel verschillende taken. De div variabel wordt gebruikt voor het maken van het element waarin de bijhorende class in wordt geplaats, dit wordt bij alle classes gebruikt en div wordt dus bij alle children ingezet. btn en br worden bij de children endScreen en failscreen gebruikt. btn wordt gebruikt om de btn weer te geven die de game opnieuw start en br wordt gebruikt om de button en de tekst van div (toegevoegd doormiddel van .innerHTML, hier was dus geen extra variabel voor nodig) van elkaar te scheiden wat er beter uitziet in de game.
+<br>
 
-Toelichting inheritance
+**functie**<br>
+de functie die wordt overgeërfd is de de update() functie. in deze functie wordt de nummer waarde van de x en de y variabelen omgezet in px, die in tegenstelling tot de number van x en y wel te gebruiken is voor styling.<br>  
+
 
 ## Game development technieken
-
-Beschrijving game development technieken
+HTML+CSS Basics: Ik heb gebruik gemaakt van html css basics bij de opmaak van de game door gebruik te maken van verschillende plaatjes als achtergronden voor de classes. ook hebben alle verschillende classes verschillende element namen, en heb ik gebruikt gemaakt van transform voor het maken van deze elementen.<br>
+GameLoop: in de game-class zit een gameloop die requestAnimationFrame aanroept waardoor de game een framerate van 60fps heeft (met een 60hz monitor). <br>
+Collsion Detection: er is ook een collision check in de game-class te vinden deze vindt plaats voor de collsion tussen wool en chonk en de collision vindt plaats tussen wool en cat.<br>
+Besturing: wool is te bewegen door de pijltjes omhoog en omlaag, met het pijltje omlaag gaat wool met -5px omlaag en met het pijltje omhoog gaat wool met +5px omhoog.<br>
+Timer: er is in de game 2 verschillende keren gebruik gemaakt van een timer, in de game-class en in de timer-class. in de game-class wordt de timer gebruikt om per 4 seconden/240 frames een 50% kans te hebben om een nieuwe cat in te spawnen. deze timer start op 0 en telt omhoog en wordt elke keer als hij 4 seconden/240 frames bereikt gereset naar 0 en dit wordt dan weer herhaald. de tweede timer is in de timer-class en wordt gebruikt als een klok die aftelt van 60 seconde/3600 frames. Deze timer begint aan de start van het spel en stopt bij de 0 en wordt pas weer gereset als de game zelf opnieuw wordt gestart.<br>
+Object pool: voor het inspawnen van cat en wool is er gebruik gemaakt van een Object Pool. dit is bij deze gedaan

@@ -3,8 +3,15 @@ import { entities } from "./entities.js";
 export class timer extends entities{
     
     // The starting timer
-    public timer: number = 3600
+    private _timer: number = 3600
 
+    get timer() {
+        return this._timer
+    }
+
+    set timer(i:number){
+        this._timer    
+    }
     constructor(tagName: string) {
 
         // Super
@@ -29,12 +36,12 @@ export class timer extends entities{
     public update() : void {
 
         // Updating the timer in-game 
-        let secondsLeft = Math.floor(this.timer / 60)
+        let secondsLeft = Math.floor(this._timer / 60)
         this.div.innerHTML = `${secondsLeft}`;
 
         // timer
-        if(this.timer > 0){
-            this.timer--
+        if(this._timer > 0){
+            this._timer--
         }
 
         // Super update
