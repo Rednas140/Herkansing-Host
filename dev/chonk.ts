@@ -12,7 +12,7 @@ export class chonk extends entities{
         this.create();
         
         // The x and y values of the chonk
-        this.x = window.innerWidth; 
+        this.x = Math.floor(Math.random() * (window.innerWidth - this.div.clientWidth)) + 1000; 
         this.y = Math.floor(Math.random() * (window.innerHeight - this.div.clientHeight));
     }
 

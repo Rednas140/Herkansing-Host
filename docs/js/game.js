@@ -52,7 +52,7 @@ class Game {
             this.spawnCat();
             this.spawnTimer = 0;
         }
-        if (this.healthBar.healthBar == 0) {
+        if (this.healthBar.healthBar <= 0) {
             this.failHorn.play();
             this.themeSong.pause();
             this.spawnFail();
