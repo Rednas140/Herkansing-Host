@@ -3,7 +3,7 @@ import { entities } from "./entities.js";
 export class health extends entities{
     
     // The starting health
-    private _healthBar : number = 20
+    private _healthBar : number = 100
 
     get healthBar() {
         return this._healthBar
